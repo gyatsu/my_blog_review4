@@ -9,7 +9,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.save
-    redirect_to "/post/#{@post.id}"
+    redirect_to "/posts/#{@post.id}"
   end
 
   def show
