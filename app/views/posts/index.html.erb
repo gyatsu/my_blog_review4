@@ -24,13 +24,9 @@
 
 
   <div class="list-group">
-  <% @posts.each_with_index do |post,index| %>
-    <% if index >=5
-        break
-      end
-    %>
-    <a href="/posts/<%= post.id %>"class="list-group-item"><%= post.title %>
-    </a>
+  <% @posts.each do |post| %>
+  <br>
+  <h4><%= link_to post.title, post_path(post) %></h4>
   <% end %>
   </div>
 
